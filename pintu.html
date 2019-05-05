@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>拼图小游戏</title>
+    <script src="js/angularjs/angular.min.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/controller/pintuController.js"></script>
+</head>
+<body ng-app="pintu" ng-controller="pintuController" ng-init="" ng-keydown="move($event)">
+<div >
+    <div>
+        <img src="image/timg{{num}}_{{list[0]}}.jpg">
+        <img src="image/timg{{num}}_{{list[1]}}.jpg">
+        <img src="image/timg{{num}}_{{list[2]}}.jpg">
+    </div>
+    <div>
+        <img src="image/timg{{num}}_{{list[3]}}.jpg">
+        <img src="image/timg{{num}}_{{list[4]}}.jpg">
+        <img src="image/timg{{num}}_{{list[5]}}.jpg">
+    </div>
+    <div>
+        <img src="image/timg{{num}}_{{list[6]}}.jpg">
+        <img src="image/timg{{num}}_{{list[7]}}.jpg">
+        <img src="image/timg{{num}}_{{list[8]}}.jpg">
+    </div>
+</div>
+<div>
+    <p>你走了{{counter}}步！</p><br>
+    <button ng-click="random(100)">开始</button>
+    <button ng-click="changePic()">更换图片</button>
+    <button ng-click="reset()">重置</button>
+    <button ng-click="commit()">确认</button>
+</div>
+</body>
+</html>
